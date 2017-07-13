@@ -71,6 +71,9 @@
  >  ./bazel-bin/kcws/cc/seg_backend_api --model_path=kcws/models/seg_model.pbtxt(绝对路径到seg_model.pbtxt>)   --vocab_path=kcws/models/basic_vocab.txt   --max_sentence_len=80
 
 ### 词性标注的训练说明：
+需要增加一步：
+bazel build kcws/cc:dump_vocab
+./bazel-bin/kcws/cc/dump_vocab word_vec.txt kcws/models/word_vocab.txt
 
 https://github.com/koth/kcws/blob/master/pos_train.md
 
